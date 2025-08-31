@@ -1,0 +1,25 @@
+﻿<Window x:Class="MoneyManagerApp.Presentation.Sing_Up"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MoneyManagerApp.Presentation"
+        mc:Ignorable="d"
+        Title="Sing up" Height="550" Width="800" ResizeMode="NoResize" SizeToContent="Manual">
+    <Grid>
+        <TextBlock  Text="Sing up" HorizontalAlignment="Center"  FontSize="40" Margin="0,65,0,400" Height="NaN" />
+        <TextBlock HorizontalAlignment="Center" Margin="0,160,175,0" TextWrapping="Wrap" Text="Username" VerticalAlignment="Top" />
+        <TextBox x:Name="UsernameTextBox" HorizontalAlignment="Center"  Margin="0,181,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="230" Height="30" FontSize="20"/>
+        <TextBlock HorizontalAlignment="Left" Margin="286,216,0,0" TextWrapping="Wrap" Text="Email/Phone number" VerticalAlignment="Top"/>
+        <TextBox x:Name="EmailOrPhoneTextBox" HorizontalAlignment="Center" Margin="0,242,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="230" Height="30" FontSize="20"/>
+        <TextBlock HorizontalAlignment="Left" Margin="288,277,0,0" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top"/>
+        <PasswordBox x:Name="PasswordTextBox" HorizontalAlignment="Center" Margin="0,298,0,0" VerticalAlignment="Top" Width="230" Height="30" FontSize="20"/>
+        <Button x:Name="SignUpButton" FontSize="22" Content="Sing up" HorizontalAlignment="Center" Margin="0,368,0,0" VerticalAlignment="Top" Width="230" Height="40" Background="#0092FF" Click="SignUpButton_Click" Foreground="White">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+    </Grid>
+</Window>

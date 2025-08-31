@@ -1,0 +1,30 @@
+﻿<Window x:Class="MoneyManagerApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MoneyManagerApp"
+        mc:Ignorable="d"
+        Title="Log in" Height="550" Width="800" ResizeMode="NoResize" SizeToContent="Manual">
+    <Grid>
+        <TextBlock Text="Log in" HorizontalAlignment="Center" FontSize="40" Margin="0,60,0,400" Height="60" />
+        <TextBox x:Name="UsernameOrEmailTextBox" HorizontalAlignment="Center" Margin="0,181,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="230" Height="30" FontSize="20"/>
+        <TextBlock HorizontalAlignment="Left" Margin="285,160,0,0" TextWrapping="Wrap" Text="Email" VerticalAlignment="Top" />
+        <PasswordBox x:Name="PasswordTextBox" HorizontalAlignment="Center" Margin="0,241,0,0" VerticalAlignment="Top" Width="230" Height="30" FontSize="20"/>
+        <TextBlock HorizontalAlignment="Left" Margin="285,216,0,0" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top" Height="20"/>
+        <Button FontSize="14" Content="Create a new account" Click="CreateAccountButton_Click" HorizontalAlignment="Left" Margin="276,300,0,0" VerticalAlignment="Top" Height="30" Width="145" Background="#AA00D7" Foreground="White">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Button FontSize="14" Content="Log in" Click="LoginButton_Click" HorizontalAlignment="Left" Margin="431,300,0,0" VerticalAlignment="Top" Height="30" Width="80" Background="#0092FF" Foreground="White">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+    </Grid>
+</Window>

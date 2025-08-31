@@ -1,0 +1,64 @@
+﻿<Window x:Class="MoneyManagerApp.Presentation.Create_New_Account"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MoneyManagerApp.Presentation"
+        mc:Ignorable="d"
+        Title="Create new account" Height="550" Width="800" ResizeMode="NoResize" SizeToContent="Manual">
+    <Window.Resources>
+        <!-- Стиль для кнопок -->
+        <Style x:Key="CustomButtonStyle" TargetType="Button">
+            <Setter Property="FontSize" Value="26"/>
+            <Setter Property="Height" Value="45"/>
+            <Setter Property="Width" Value="140"/>
+            <Setter Property="Background" Value="#0092FF"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border BorderThickness="1" BorderBrush="#0092FF" Background="{TemplateBinding Background}" CornerRadius="5">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!-- Стиль для "Back" кнопки -->
+        <Style x:Key="BackButtonStyle" TargetType="Button" BasedOn="{StaticResource CustomButtonStyle}">
+            <Setter Property="FontSize" Value="25"/>
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="Width" Value="80"/>
+            <Setter Property="Background" Value="#AA00D7"/>
+            <Setter Property="Margin" Value="70,40,0,0"/>
+        </Style>
+    </Window.Resources>
+
+    <Grid>
+        <Grid.ColumnDefinitions >
+            <ColumnDefinition Width="129" ></ColumnDefinition>
+            <ColumnDefinition Width="671"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Grid.Column="0" Grid.RowSpan="5" Background="LightBlue"></Grid>
+        <Label Content="Home" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="23" MouseDown="HomeLabel_MouseDown"/>
+        <Label Content="Accounts" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" FontSize="23" MouseDown="AccountsLabel_MouseDown"/>
+        <Label Content="My goals" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Center" FontSize="23" MouseDown="MyGoalsLabel_MouseDown"/>
+        <Label Content="Statistic" HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Center" FontSize="23" MouseDown="StatisticLabel_MouseDown"/>
+        <Label Content="My profile" HorizontalAlignment="Center" Grid.Row="4" VerticalAlignment="Center" FontSize="23" MouseDown="MyProfileLabel_MouseDown"/>
+        <Grid Grid.Column="1" Grid.RowSpan="5">
+            <TextBlock HorizontalAlignment="Left" Margin="226,35,0,0" TextWrapping="Wrap" Text="Create new account" VerticalAlignment="Top" FontSize="35" Height="50" Width="320"/>
+            <TextBlock HorizontalAlignment="Left" Margin="76,150,0,0" TextWrapping="Wrap" Text="Account name:" VerticalAlignment="Top" FontSize="23" Height="35" Width="150"/>
+            <TextBox x:Name="AccountNameTextBox" HorizontalAlignment="Left" Margin="336,152,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="210" FontSize="20" />
+            <Button Style="{StaticResource CustomButtonStyle}" Content="Save" HorizontalAlignment="Left" Margin="406,412,0,0" VerticalAlignment="Top" Click="Save_Button_Click"/>
+            <Button Style="{StaticResource BackButtonStyle}" Content="Back" HorizontalAlignment="Left" VerticalAlignment="Top" Click="BackButton_Click"/>
+        </Grid>
+    </Grid>
+</Window>

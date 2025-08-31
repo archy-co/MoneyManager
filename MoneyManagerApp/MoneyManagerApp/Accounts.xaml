@@ -1,0 +1,62 @@
+﻿
+<Window x:Class="MoneyManagerApp.Presentation.Accounts"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MoneyManagerApp.Presentation"
+        mc:Ignorable="d"
+        Title="Accounts" Height="550" Width="800" ResizeMode="NoResize" SizeToContent="Manual">
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Foreground" Value="White" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border CornerRadius="5" Background="{TemplateBinding Background}">
+                            <!-- Your button content here -->
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
+    <Grid>
+        <Grid.ColumnDefinitions >
+            <ColumnDefinition Width="129" ></ColumnDefinition>
+            <ColumnDefinition Width="671"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Grid.Column="0" Grid.RowSpan="5" Background="LightBlue"></Grid>
+        <Label Content="Home" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="23" MouseDown="HomeLabel_MouseDown"/>
+        <Label Content="Accounts" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" FontSize="23" MouseDown="AccountsLabel_MouseDown"/>
+        <Label Content="My goals" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Center" FontSize="23" MouseDown="MyGoalsLabel_MouseDown"/>
+        <Label Content="Statistic" HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Center" FontSize="23" MouseDown="StatisticLabel_MouseDown"/>
+        <Label Content="My profile" HorizontalAlignment="Center" Grid.Row="4" VerticalAlignment="Center" FontSize="23" MouseDown="MyProfileLabel_MouseDown"/>
+
+        <Grid Name="AccountsGrid" Grid.Column="1" Grid.RowSpan="5">
+            <TextBlock HorizontalAlignment="Center" Margin="0,40,0,0" TextWrapping="Wrap" Text="Accounts" VerticalAlignment="Top" FontSize="35" Height="50" Width="150"/>
+            <Button Content="Create new account" HorizontalAlignment="Center" Margin="0,434,0,0" VerticalAlignment="Top" FontSize="24" Width="244" Height="35" Background="#0092FF" Foreground="White" Click="Button_Create_New_Account_Click">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+
+
+        </Grid>
+    </Grid>
+
+    
+
+
+</Window>

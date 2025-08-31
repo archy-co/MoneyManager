@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="EPPlus" Version="7.0.3" />
+    <PackageReference Include="MaterialDesignThemes" Version="4.9.0" />
+    <PackageReference Include="NLog" Version="5.2.7" />
+    <PackageReference Include="OxyPlot.Wpf" Version="2.1.2" />
+    <PackageReference Include="Portable.BouncyCastle" Version="1.9.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MoneyManagerApp.BLL\MoneyManagerApp.BLL.csproj" />
+    <ProjectReference Include="..\MoneyManagerApp.DAL\MoneyManagerApp.DAL.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="ExelFile\" />
+  </ItemGroup>
+
+</Project>
